@@ -42,4 +42,7 @@ future forcast box color =
 // cloudy-theme //
 
 bg-color linear = 
-#59d8d6 + 
+#59d8d6 + #6ae7e6;
+
+mainbody color =
+
