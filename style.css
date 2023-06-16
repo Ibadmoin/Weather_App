@@ -1,27 +1,48 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: poppins;
 }
-.mainContainer{
+
+@font-face {
+    font-family: poppins;
+    src: url('./Poppins-Medium.ttf');
+}
+
+body{
+    min-width: 300px;
+}
+
+.mainContainer {
     /* background-color:  #5acbf9; */
-    background: linear-gradient( #5ae0fe, #5acbf9);
+    background: linear-gradient(#5ae0fe, #5acbf9);
     width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.innerContainer{
-    background: linear-gradient( #5ac9fa , #79e4fe);
+
+.innerContainer {
+    background: rgba(255, 255, 255, .1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(1px);
+    border: 3px solid rgba(255, 255, 255, 0.3);
 
     padding: 30px 20px;
     width: 300px;
     height: 500px;
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
-.header{
+
+.header {
     background-color: transparent;
     /* border-top-left-radius: 15px; */
     /* border-top-right-radius:15px ; */
@@ -35,17 +56,19 @@
     /* padding-top: 30px;
     padding-left: 10px; */
 }
-.location{
+
+.location {
     width: 20px;
     height: 20px;
 }
 
-.location img{
+.location img {
     width: 100%;
     height: 100%;
     fill: red;
 }
-.input{
+
+.input {
     width: 100%;
     height: 100%;
     /* background-color: gray; */
@@ -55,13 +78,13 @@
     height: 30px;
     color: #1a325e;
     margin-left: 10px;
-    color: #1a325e;
     font-weight: 700;
-    border-bottom:2px solid transparent ;
+    border-bottom: 2px solid transparent;
     transition: border-bottom-color 0.3s;
 
 }
-.input::placeholder{
+
+.input::placeholder {
     color: #1a325e;
     font-weight: 700;
     opacity: 1;
@@ -75,68 +98,84 @@
 
 @keyframes border-bottom-animation {
     0% {
-      border-bottom-color: transparent;
-      background-position: left bottom;
+        border-bottom-color: transparent;
+        background-position: left bottom;
     }
+
     100% {
-      border-bottom-color: #1a325e;
-      background-position: right bottom;
+        border-bottom-color: #1a325e;
+        background-position: right bottom;
     }
-  }
-  /* placeholder animation */
-  .input:focus::placeholder {
+}
+
+/* placeholder animation */
+.input:focus::placeholder {
     opacity: 0;
     animation: fadeRightAnimation 0.3s forwards;
-  }
-  @keyframes fadeRightAnimation {
+}
+
+@keyframes fadeRightAnimation {
     0% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
+
     100% {
-      transform: translateX(100%);
+        transform: translateX(100%);
     }
-  }
-  /* placeholder animation */
-.middlesection{
+}
+
+/* placeholder animation */
+.middlesection {
     width: 100%;
-    height: 200px;
+    height: 100px;
     /* background-color: red; */
     display: flex;
     justify-content: center;
     align-items: center;
-   
-}
-.middlesectionImg{
-    width: 250px;
-    height: 150px;
-    /* background-color: pink; */
-    
-    
-}
-.middlesectionImg img {
-    width: 100%;
-    height: inherit;
-    filter: drop-shadow(rgba(0, 0, 0, 0.35) 0px 5px 15px) ;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+
 }
 
-.weather-details{
+.middlesectionImg {
+    width: 150px;
     height: 100px;
+
+    /* background-color: pink; */
+    margin-top: 45px;
+
+
 }
-.weather-type{
+
+.middlesectionImg img {
+    width: 100%;
+    height: 100%;
+    height: inherit;
+    filter: drop-shadow(rgba(0, 0, 0, 0.35) 0px 5px 15px);
+}
+
+.weather-details {
+    height: 100px;
+    /* background-color: red; */
+}
+
+.weather-type {
     height: 20px;
     display: flex;
     justify-content: center;
 
 
 }
+
 .weather-type p {
     font-weight: lighter;
-    color:#1a325e ;
-    
-   
+    color: #1a325e;
+
+
 }
 
-.temp{
+.temp {
     /* background: green; */
     height: 60px;
     display: flex;
@@ -145,12 +184,14 @@
     position: relative;
     color: #1a325e;
 }
+
 .temp h2 {
-  font-size: 2.9em;
-  padding: 0;
-  /* background: green; */
+    font-size: 2.9em;
+    padding: 0;
+    /* background: green; */
 
 }
+
 .temp span {
     width: 30px;
     height: 20px;
@@ -158,17 +199,28 @@
     position: absolute;
     left: 58%;
     top: -25%;
-   
-    
+
+
 }
 
 .weather-more-details {
     /* background: gray; */
     height: 20px;
+    width: 140px;
+    min-width: 140px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
-    gap: 10px;
-  
+    /* gap: 1000px; */
+
+}
+
+.windDetailsText {
+    /* color: white; */
+    color: #1a325e;
+    font-weight: 100 !important;
+    font-size: 12px;
+
 }
 
 .wind {
@@ -182,10 +234,11 @@
 
 }
 
-.wind  img {
-    width: 18px;
-  
+.wind img {
+    width: 10px;
+
 }
+
 .perp {
     /* background: skyblue; */
     width: 50%;
@@ -197,46 +250,60 @@
 
 }
 
-.perp  img {
-    width: 18px;
-  
+.perp img {
+    width: 10px;
+
 }
 
+.weather-type p {
+    font-size: 14px;
+    font-size: 100;
+}
 
 /* future forcast div */
-.future-forcast{
+.future-forcast {
     /* background: blueviolet; */
     width: 100%;
     height: 120px;
     margin-top: 10px;
     display: flex;
     align-items: center;
+    /* background-color: yellow; */
     justify-content: space-evenly;
-    
+
 }
 
-.forcast-box{
+.forcast-box {
     width: 30%;
-    height: 90%;
-    background-color: rgba(255, 255, 255,0.2);
-    border-radius:10px ;
+    /* height: 90%; */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 10px 10px;
 }
 
-.forcast-box .time-div{
+.forcast-box .time-div {
     width: 100%;
     height: 20%;
     /* background: gray; */
     text-align: center;
     padding: 5px;
-    color: rgba(163, 163, 163,0.7);
+    font-size: 10px;
+    color: rgba(67, 67, 67, 0.7);
 }
-.forcast-box-img{
+
+.forcast-box-img {
 
     /* background: green; */
     width: 100%;
     height: 50%;
     text-align: center;
 }
+
 .forcast-box-img img {
     width: 50%;
     margin-top: 5px;
@@ -244,14 +311,20 @@
     mix-blend-mode: white;
 }
 
-.forcast-box-temp{
+.forcast-box-temp {
     width: 100%;
     height: 30%;
     display: flex;
     justify-content: center;
     color: #1a325e;
+    /* background-color: yellow; */
 }
+
 .forcast-box-temp span {
-    height: fit-content;
-    margin-top: -5px;
+ 
+    /* color: yellow; */
+    font-weight: 100;
+    margin: 0;
+    margin-left: 5px;
+    font-weight: 600;
 }
