@@ -18,8 +18,7 @@ futuer forcast box color =
 
 
 //--------------------------//
-
-Cloudy theme colors
+hot theme colors
 
 bg-color linear = 
 

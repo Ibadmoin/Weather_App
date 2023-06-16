@@ -16,21 +16,15 @@ body{
 
 .mainContainer {
     /* background-color:  #5acbf9; */
-    background: linear-gradient(#5ae0fe, #5acbf9);
+    background: linear-gradient( #5ae0fe, #5acbf9);
     width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-.innerContainer {
-    background: rgba(255, 255, 255, .1);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(1px);
-    border: 3px solid rgba(255, 255, 255, 0.3);
+.innerContainer{
+    background: linear-gradient( #5ac9fa , #79e4fe);
 
     padding: 30px 20px;
     width: 300px;
@@ -41,8 +35,7 @@ body{
     justify-content: space-around;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
-
-.header {
+.header{
     background-color: transparent;
     /* border-top-left-radius: 15px; */
     /* border-top-right-radius:15px ; */
@@ -328,3 +321,48 @@ body{
     margin-left: 5px;
     font-weight: 600;
 }
+
+
+/* theme colors  */
+/* storm */
+.storm-theme-bg{
+    
+    background: linear-gradient( 180deg, #5ac9fa , #79e4fe );
+ }
+.storm-theme-cont-bg{
+   
+    background: linear-gradient(to left, #5ae0fe , #5acbf9);
+
+
+
+}
+/* storm */
+/* hot */
+
+.hot-theme-bg{
+    
+    background: linear-gradient( 180deg, #f4b17c , #f8c07f );
+ }
+.hot-theme-cont-bg{
+   
+    background: linear-gradient(to left, #f9e177, #ffbe94);
+
+
+
+}
+/* hot */
+/* cloudy */
+.cloud-theme-bg{
+    
+    background: linear-gradient( 180deg, #59d8d6 , #6ae7e6 );
+
+}
+.cloud-theme-cont-bg{
+   
+    background: linear-gradient(to left, #59d8d6 ,#6ae7e6);
+  
+
+
+}
+/* cloudy */
+/* theme color */
