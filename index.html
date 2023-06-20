@@ -16,28 +16,30 @@
         <div class="innerContainer storm-theme-cont-bg" id="card">
             <div class="header">
                 <div class="location"><img src="./images/location-pin.png" alt=""></div>
-                <div><input class="input" placeholder="Type your City" type="text"></div>
+                <div><input class="input" placeholder="Type your City" id="city-input" type="text">
+                </div>
+                <span id="search-icon"><i class="fa-solid fa-search"></i></span>
             </div>
             <div class="middlesection">
                 <div class="middlesectionImg">
-                    <img src="./images/thunder-main.gif" alt="">
+                    <img src="./images/thunder-main.gif"  id="weather-img" alt="">
                 </div>
             </div>
             <div class="weather-details">
                 <div class="weather-type">
-                    <p>Thunderstorm!</p>
+                    <p id="weather-detail">Thunderstorm!</p>
                 </div>
                 <div class="temp">
-                    <h2>32 °</h2>
+                    <h2 id="temp-detail">32 °</h2>
                 </div>
                 <div class="weather-more-details">
                     <div class="wind">
                         <img src="./images/icons/wind.png" alt="">
-                        <p class="windDetailsText">10 km/h</p>
+                        <p class="windDetailsText" id="wind-detail">10 km/h</p>
                     </div>
                     <div class="perp">
                         <img src="./images/icons/drop.png" alt="" />
-                        <p class="windDetailsText">68 %</p>
+                        <p class="windDetailsText" id="perp-detail" >68 %</p>
                     </div>
                 </div>
             </div>
