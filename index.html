@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <link rel="icon" type="image/x-icon" href="./images/icons/title-img.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </head>
 
 <body>
@@ -38,15 +41,15 @@
             </div>
             <div class="middlesection">
                 <div class="middlesectionImg">
-                    <img src="./images/thunder-main.gif" alt="">
+                    <img id="mainImg" src="./images/thunder-main.gif" alt="">
                 </div>
             </div>
             <div class="weather-details">
                 <div class="weather-type">
-                    <p>Thunderstorm!</p>
+                    <p id="weatherType">Thunderstorm!</p>
                 </div>
                 <div class="temp">
-                    <h2 id="currentTemperature">32 °</h2>
+                    <h2 id="currentTemperature">32°</h2>
                 </div>
                 <div class="weather-more-details">
                     <div class="wind">
