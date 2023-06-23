@@ -4,8 +4,6 @@ let data = null;
 const log = console.log;
 const searchbtn = document.getElementById("searchbtn");
 const inputFeild = document.getElementById("city-input");
-console.log(searchbtn);
-console.log(inputFeild);
 var city = "karachi";
 
 
@@ -37,6 +35,7 @@ inputFeild.addEventListener("keydown", (event) => {
     checkWeather();
   }
 });
+
 // Enter key functionality on input feild//
 
 const apiKey = "daff2652b6f168feac89e292fe74e6f2";
@@ -60,28 +59,29 @@ function checkWeather() {
 
 
       if (weatherType.toLowerCase().includes("thunderstorm")) {
-        mainImg.src = "./images/thunder-main.gif";
+        mainImg.src = "images\\images\\thunderstorms.svg";
         mainTheme.style.background = "linear-gradient(180deg, #f4b17c, #f8c07f)";
         card.style.background = "linear-gradient(to left, #f9e177, #ffbe94)";
       } else if (weatherType.toLowerCase().includes("rain")) {
-        mainImg.src = "./images/rain.png";
+        mainImg.src = "images\\images\\rainy-1.svg";
+        // document.getElementById('currentTemperature').style.color = "#FFFFFF"
         mainTheme.style.background = "linear-gradient(180deg, #5378c5, #758fbd)";
         card.style.background = "linear-gradient(to left, #5378c5, #758fbd)";
       } else if (weatherType.toLowerCase().includes("cloud")) {
-        mainImg.src = "./images/cloudy-main.png";
+        mainImg.src = "images\\images\\cloudy.svg";
         mainTheme.style.background = "linear-gradient(180deg, #59d8d6, #6ae7e6)";
         card.style.background = "linear-gradient(to left, #59d8d6, #6ae7e6)";
       } else if (weatherType.toLowerCase().includes("clear sky")) {
-        mainImg.src = "./images/day-clear-sky1.gif";
+        mainImg.src = "images\\images\\clear-day.svg";
         mainTheme.style.background = "linear-gradient(180deg, #f4b17c, #f8c07f)";
         card.style.background = "linear-gradient(to left, #f9e177, #ffbe94)";
       } else if (weatherType.toLowerCase().includes("snow")) {
-        mainImg.src = "./images/snow1.gif";
+        mainImg.src = "images\\images\\snow.svg";
         mainTheme.style.background = "linear-gradient(180deg, #98c2ff, #c4e2ff)";
         card.style.background = "linear-gradient(to left, #98c2ff, #c4e2ff)";
 
       } else if (weatherType.toLowerCase().includes("mist")) {
-        mainImg.src = "./images/mist.gif";
+        mainImg.src = "images\\images\\mist.svg";
         mainTheme.style.background = "linear-gradient(180deg, #899dab, #aebec9)";
         card.style.background = "linear-gradient(to left, #899dab, #aebec9)";
 
@@ -97,24 +97,24 @@ function checkWeather() {
       list.map((item) => {
         const dateTimeString = item.dt_txt;
         const dateTime = new Date(dateTimeString);
-        const formattedTime = dateTime.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: false });
+        const formattedTime = dateTime.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
         console.log(item.weather[0].description); // Log the weather description
         let imgSrc;
         // condtions to check weaher type of futre forcast box & update them accordingly//
         if (weatherType.toLowerCase().includes("cloud")) {
-          imgSrc = "./images/icons/cloud.png";
+          imgSrc = "images\\images\\cloudy.svg";
         } else if (weatherType.toLowerCase().includes("rain")) {
-          imgSrc = "./images/icons/rainy.png";
+          imgSrc = "images\\images\\rainy-1.svg";
         } else if (weatherType.toLowerCase().includes("snow")) {
-          imgSrc = "./images/icons/snowflake.png";
+          imgSrc = "images\\images\\snow.svg";
 
         } else if (weatherType.toLowerCase().includes("thunderstorm")) {
-          imgSrc = "./images/icons/lightning.png";
+          imgSrc = "images\\images\\thunderstorms.svg";
 
         } else if (weatherType.toLowerCase().includes("mist")) {
-          imgSrc = "./images/icons/wind.png";
+          imgSrc = "images\\images\\mist.svg";
         } else if (weatherType.toLowerCase().includes("clear")) {
-          imgSrc = "./images/icons/sunny-day.png";
+          imgSrc = "images\\images\\clear-day.svg";
         }
 
 
@@ -131,7 +131,13 @@ function checkWeather() {
               <h2  style="text-align:center;">${Math.round(item.main.temp)} </h2><span>°</span>
             </div>
           </div>`;
+        log(document.querySelector('#cityName').innerText = city.name)
+
         console.log(item.main.temp);
+        loader.style.display = 'none';
+      mainTheme.style.display = 'flex'
+
+
       });
     })
     .catch(error => {
@@ -169,8 +175,10 @@ if (option === 1) {
   mainTheme.classList.add("cloud-theme-bg");
 }
 
-window.addEventListener('load', function () {
-  var loader = document.getElementById('loader');
-  loader.style.display = 'none';
+// window.addEventListener('load', function () {
+//   var loader = document.getElementById('loader');
+  loader.style.display = 'flex';
+  mainTheme.style.display = 'none'
+ 
 //add sweet alert here for co ordinates
-});
+// });
