@@ -9,4 +9,4 @@ Features to be added in future:</p>
 </ol>
 
 
-<h1><a target=_blank href="https://weatherapp-786.web.app/">Weather App</a></h1>
+<h1><a target="_blank" align="center" href="https://weatherapp-786.web.app/">Weather App</a></h1>
